@@ -1,0 +1,326 @@
+/*? Google Fonts Start */
+
+@import url('https://fonts.googleapis.com/css2?family=Electrolize&display=swap');
+
+/*? Google Fonts End */
+
+/*! Base CSS Start */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Electrolize', sans-serif;
+}
+
+.container {
+    background-color: #000;
+    color: #fff;
+}
+
+/*! Base CSS End */
+
+/* Navbar Start */
+
+.navbar {
+    background-color: #000;
+    height: 60px;
+    color: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+.navbar_wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    padding: 0 50px;
+}
+
+.logo {
+    font-size: 30px;
+    color: rgb(255, 70, 70);
+}
+
+.menu_list {
+    display: flex;
+    list-style: none;
+    column-gap: 30px;
+}
+
+.menu_list_item {
+    cursor: pointer;
+}
+
+.menu_list_item.active{
+    font-weight: bold;
+}
+
+.menu_list_item:hover {
+    font-weight: bold;
+}
+
+.profile_container {
+    display: flex;
+    align-items: center;
+    column-gap: 20px;
+}
+
+.profile_image {
+    width: 32px;
+    height: 32px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.profile_text_container {
+    display: flex;
+    align-items: center;
+    column-gap: 4px;
+    line-height: 1;
+}
+
+.toggle {
+    width: 40px;
+    background-color: #fff;
+    height: 20px;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+}
+
+.toggle_icon {
+    margin-top: 3px;
+    color: goldenrod;
+}
+
+.toggle_ball {
+    width: 18px;
+    height: 18px;
+    background-color: #000;
+    border-radius: 50%;
+    cursor: pointer;
+    position: absolute;
+    right: 1px;
+}
+
+/* Navbar End */
+
+/* Sidebar Start */
+
+.sidebar {
+    background-color: #000;
+    color: #fff;
+    height: 100%;
+    width: 50px;
+    position: fixed;
+    display: flex;
+    padding-top: 30px;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 25px;
+}
+
+.sidebar i {
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.sidebar i:hover {
+    color: rgb(255, 70, 70);
+}
+
+/* Sidebar End */
+
+/* Featured Content Start */
+
+.content_wrapper {
+    margin-left: 50px;
+}
+
+.featured_content {
+    background: url(img/spiderman.jpg);
+    padding: 50px;
+    height: calc(100vh - 155px);
+    background-size: 100% 100%;
+}
+
+.featured_title {
+    width: 400px;
+}
+
+.featured_desc {
+    width: 500px;
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 10px;
+    margin: 30px 0;
+}
+
+.featured_buttons {
+    display: flex;
+    column-gap: 20px;
+}
+
+.featured_buttons button {
+    padding: 10px 25px;
+    border-radius: 2px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    display: flex;
+    column-gap: 10px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.featured_buttons .info_button {
+    background-color: rgba(145, 142, 142, 0.5);
+    color: #fff;
+}
+
+/* Featured Content End */
+
+/* Filter Start */
+
+.movie_list_filter {
+    margin: 20px 0 20px 10px;
+    padding: 20px;
+}
+
+.movie_list_filter select {
+    background-color: #000;
+    color: #fff;
+    padding: 8px 0;
+    width: 125px;
+}
+
+/* Filter End */
+
+/* Movie List Start */
+
+.movie_list_container {
+    margin-left: 70px;
+}
+
+.movie_list_wrapper {
+    overflow-x: hidden;
+    position: relative;
+}
+
+.movie_list {
+    list-style: none;
+    padding: 0;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    column-gap: 30px;
+}
+
+.movie_item {
+    position: relative;
+}
+
+.movie_item:hover .movie_item_title,
+.movie_item:hover .movie_item_buttons {
+    opacity: 1;
+}
+
+.movie_item:hover .movie_item_img {
+    transform: scale(1.2);
+    margin: 0 30px;
+    opacity: .5;
+}
+
+.movie_item_img {
+    width: 270px;
+   height: 200px;
+   object-fit: cover;
+   transition: all 1s ease-in-out;
+}
+
+.movie_item_title {
+    background-color: rgba(40, 40, 40, 0.4);
+    padding: 0 10px;
+    font-size: 28px;
+    font-weight: bold;
+    position: absolute;
+    top: 10%;
+    left: 50px;
+    opacity: 0;
+    transition: all 1s ease-in-out;
+}
+
+.movie_item_buttons {
+    background-color: rgba(40, 40, 40, 0.4);
+    padding: 0 10px;
+    font-size: 28px;
+    font-weight: bold;
+    position: absolute;
+    bottom: 10%;
+    left: 50px;
+    display: flex;
+    column-gap: 20px;
+    opacity: 0;
+    transition: all .5s ease-in-out;
+}
+
+.movie_item_buttons i {
+    cursor: pointer;
+    opacity: .5;
+    font-size: 20px;
+    transition: all .5s ease;
+}
+
+.movie_item_buttons i:hover {
+    opacity: 1;
+}
+
+.arrow {
+    width: 100px;
+    display: flex;
+    font-size: 120px;
+    position: absolute;
+    color: grey;
+    opacity: 0.5;
+    right: 10px;
+    top: 30%;
+    transition: all 0.5s ease;
+    cursor: pointer;
+}
+
+.arrow:hover {
+    opacity: 1;
+}
+
+/* Movie List End */
+
+/* Responsive Start */
+
+@media only screen and (max-width: 800px) {
+    
+    .menu_container {
+        display: none;
+    }
+
+    .featured_content {
+        height: 50vh;
+    }
+
+    .featured_desc {
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 5;
+        -webkit-box-orient: vertical;
+        max-width: 200px;
+        padding: 0;
+    }
+}
+
+/* Responsive End */
