@@ -20,3 +20,10 @@
   <li>HTML</li>
   <li>CSS</li>
 </ul>
+
+<h3>Used Libraries</h3>
+
+<ul>
+  <li>Google Fonts</li>
+  <li>Bootstrap Icons</li>
+</ul>
