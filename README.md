@@ -2,7 +2,7 @@
 
 <p>This project is a movie website developed with HTML and CSS. The site offers users multiple movies and TV series. Contents are listed according to categories.</p>
 
-<h2>Project Sections</h2>
+<h2>Project Content</h2>
 
 <ul>
   <li>Home Page</li>
